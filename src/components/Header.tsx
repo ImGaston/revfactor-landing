@@ -98,7 +98,7 @@ export function Header() {
                     {/* Mobile Menu Trigger */}
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild className="md:hidden">
-                            <Button variant="ghost" size="icon" className="text-onyx hover:text-cedar">
+                            <Button variant="ghost" size="icon" className="text-onyx dark:text-bone hover:text-cedar dark:hover:text-moss">
                                 <Menu className="w-6 h-6" />
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
@@ -133,7 +133,14 @@ export function Header() {
                                     ))}
                                 </nav>
 
-                                <div className="border-t border-onyx/10 my-6"></div>
+                                <div className="border-t border-onyx/10 dark:border-bone/10 my-6"></div>
+
+                                {/* Theme Toggle */}
+                                <div className="px-4 mb-4">
+                                    <ModeToggle />
+                                </div>
+
+                                <div className="border-t border-onyx/10 dark:border-bone/10 my-6"></div>
 
                                 <a
                                     href="https://owner.revfactor.io"

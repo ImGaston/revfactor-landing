@@ -51,7 +51,7 @@ export function Hero() {
                         <Button
                             variant="outline"
                             size="lg"
-                            className="border-cedar text-cedar hover:bg-cedar/5 rounded-full font-bold uppercase text-xs tracking-wider px-8 py-6 transition-all hover:scale-105 hover:shadow-lg bg-transparent"
+                            className="border-cedar text-bone hover:bg-cedar/10 rounded-full font-bold uppercase text-xs tracking-wider px-8 py-6 transition-all hover:scale-105 hover:shadow-lg bg-cedar"
                         >
                             Book a Call
                         </Button>
