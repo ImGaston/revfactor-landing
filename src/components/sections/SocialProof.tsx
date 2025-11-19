@@ -48,20 +48,20 @@ const testimonials = [
 
 export function SocialProof() {
     return (
-        <section id="results" className="w-full py-16 md:py-20 bg-bone/80">
+        <section id="results" className="w-full py-16 md:py-20 bg-bone/80 dark:bg-onyx/95">
             <div className="max-w-6xl mx-auto px-4 md:px-6">
 
                 {/* Part 1: Key Metrics */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 border-b border-onyx/10 pb-12 md:pb-16">
                     {metrics.map((metric, index) => (
                         <div key={index} className="flex flex-col items-center text-center">
-                            <span className="text-4xl md:text-5xl font-serif text-cedar font-medium">
+                            <span className="text-4xl md:text-5xl font-serif text-cedar dark:text-[#E8E6E0] font-medium">
                                 {metric.number}
                             </span>
-                            <span className="text-sm md:text-base font-sans font-semibold text-onyx mt-2">
+                            <span className="text-sm md:text-base font-sans font-semibold text-onyx dark:text-[#E8E6E0] mt-2">
                                 {metric.label}
                             </span>
-                            <span className="text-xs text-onyx/60 mt-1">
+                            <span className="text-xs text-onyx/60 dark:text-[#E8E6E0]/70 mt-1">
                                 {metric.sublabel}
                             </span>
                         </div>
@@ -77,9 +77,9 @@ export function SocialProof() {
                         Proven Results
                     </Badge>
 
-                    <h2 className="font-serif text-3xl md:text-4xl text-onyx lowercase leading-tight max-w-2xl">
+                    <p className="font-serif text-4xl md:text-5xl font-bold text-onyx dark:text-bone lowercase leading-tight max-w-2xl">
                         trusted by property managers who demand results
-                    </h2>
+                    </p>
                 </div>
 
                 {/* Part 3: Testimonials Grid */}
@@ -88,14 +88,14 @@ export function SocialProof() {
                         <Card
                             key={index}
                             className={cn(
-                                "bg-white/60 border-onyx/10 shadow-sm hover:shadow-md transition-all duration-200",
+                                "bg-white/50 dark:bg-cedar/20 border-onyx/10 dark:border-bone/10 hover:shadow-lg transition-shadow",
                                 testimonial.className
                             )}
                         >
                             <CardContent className="p-6 md:p-7 flex flex-col h-full">
                                 <Quote className="w-8 h-8 text-moss/30 mb-4 fill-current" />
 
-                                <p className="text-sm md:text-base text-onyx/80 leading-relaxed mb-6 italic flex-grow">
+                                <p className="text-sm md:text-base text-onyx/70 dark:text-bone/70 font-medium leading-relaxed mb-6 italic flex-grow">
                                     "{testimonial.quote}"
                                 </p>
 
@@ -104,10 +104,10 @@ export function SocialProof() {
                                         <span className="text-moss font-semibold text-sm">{testimonial.initials}</span>
                                     </div>
                                     <div className="flex flex-col text-left">
-                                        <span className="font-sans font-semibold text-sm text-onyx">
+                                        <p className="font-sans font-semibold text-sm md:text-base text-onyx dark:text-bone">
                                             {testimonial.name}
-                                        </span>
-                                        <span className="text-xs text-onyx/60">
+                                        </p>
+                                        <span className="text-xs text-onyx dark:text-bone">
                                             {testimonial.role} • {testimonial.properties}
                                         </span>
                                     </div>

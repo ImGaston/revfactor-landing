@@ -6,15 +6,36 @@
 
 @layer base {
   :root {
+    --background: #DDDAD3;
+    /* bone */
+    --foreground: #161910;
+    /* onyx */
     --radius: 0.5rem;
   }
-  
+
+  .dark {
+    --background: #161910;
+    /* onyx */
+    --foreground: #E8E6E0;
+    /* Lighter bone for better contrast */
+  }
+
+  * {
+    @apply border-border;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
     scroll-behavior: smooth;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }

@@ -9,7 +9,7 @@ export function Footer() {
     return (
         <>
             {/* Part 1: Final CTA Section */}
-            <section className="w-full py-16 md:py-20 bg-cedar text-bone">
+            <section className="w-full py-16 md:py-20 bg-tobacco text-bone">
                 <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
                     <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-bone lowercase leading-tight">
                         ready to maximize your rental revenue?
@@ -22,7 +22,7 @@ export function Footer() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
                         <Button
                             size="lg"
-                            className="bg-bone text-cedar hover:bg-bone/90 rounded-full font-bold uppercase text-xs tracking-wider px-8 py-6 transition-all hover:scale-105"
+                            className="bg-bone text-tobacco hover:bg-bone/90 rounded-full font-bold uppercase text-xs tracking-wider px-8 py-6 transition-all hover:scale-105"
                         >
                             Get Free Revenue Analysis
                         </Button>

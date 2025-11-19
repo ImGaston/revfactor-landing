@@ -19,7 +19,7 @@ const notFit = [
 
 export function WhoItsFor() {
     return (
-        <section className="w-full py-16 md:py-20 bg-bone/80">
+        <section className="w-full py-16 md:py-20 bg-bone/80 dark:bg-onyx/95">
             <div className="max-w-6xl mx-auto px-4 md:px-6">
 
                 {/* Header */}
@@ -31,11 +31,11 @@ export function WhoItsFor() {
                         Is This For You?
                     </Badge>
 
-                    <h2 className="font-serif text-3xl md:text-4xl text-onyx lowercase leading-tight">
+                    <h2 className="font-serif text-3xl md:text-4xl text-onyx dark:text-[#E8E6E0] lowercase leading-tight">
                         we work best with committed hosts
                     </h2>
 
-                    <p className="font-sans text-base md:text-lg text-onyx/75 max-w-2xl mx-auto leading-relaxed">
+                    <p className="font-sans text-base md:text-lg text-onyx/75 dark:text-[#E8E6E0]/80 max-w-2xl mx-auto leading-relaxed">
                         RevFactor isn't for everyone—and that's okay. Here's who we're built to serve.
                     </p>
                 </div>
@@ -44,10 +44,10 @@ export function WhoItsFor() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-10 md:mt-12">
 
                     {/* Perfect Fit Card */}
-                    <Card className="bg-moss/5 border-2 border-moss/20 rounded-2xl shadow-sm">
+                    <Card className="bg-moss/5 dark:bg-moss/10 border-2 border-moss/20 dark:border-moss/30 rounded-2xl shadow-sm">
                         <CardContent className="p-6 md:p-8 flex flex-col h-full">
                             <CheckCircle2 className="w-8 h-8 text-moss mb-3" />
-                            <h3 className="font-sans font-bold text-lg md:text-xl text-onyx mb-6">
+                            <h3 className="font-sans font-bold text-lg md:text-xl text-onyx dark:text-[#E8E6E0] mb-6">
                                 Perfect fit if you...
                             </h3>
 
@@ -55,7 +55,7 @@ export function WhoItsFor() {
                                 {perfectFit.map((item, index) => (
                                     <li key={index} className="flex items-start gap-3">
                                         <CheckCircle2 className="w-4 h-4 text-moss shrink-0 mt-1" />
-                                        <span className="text-sm md:text-base text-onyx/80 leading-relaxed">
+                                        <span className="text-sm md:text-base text-onyx/80 dark:text-[#E8E6E0]/85 leading-relaxed">
                                             {item}
                                         </span>
                                     </li>
@@ -65,18 +65,18 @@ export function WhoItsFor() {
                     </Card>
 
                     {/* Not Fit Card */}
-                    <Card className="bg-onyx/5 border border-onyx/10 rounded-2xl shadow-sm">
+                    <Card className="bg-onyx/5 dark:bg-bone/5 border border-onyx/10 dark:border-bone/20 rounded-2xl shadow-sm">
                         <CardContent className="p-6 md:p-8 flex flex-col h-full">
-                            <XCircle className="w-8 h-8 text-onyx/40 mb-3" />
-                            <h3 className="font-sans font-bold text-lg md:text-xl text-onyx mb-6">
+                            <XCircle className="w-8 h-8 text-onyx/40 dark:text-bone/50 mb-3" />
+                            <h3 className="font-sans font-bold text-lg md:text-xl text-onyx dark:text-[#E8E6E0] mb-6">
                                 Not the right fit if you...
                             </h3>
 
                             <ul className="space-y-4">
                                 {notFit.map((item, index) => (
                                     <li key={index} className="flex items-start gap-3">
-                                        <Minus className="w-4 h-4 text-onyx/40 shrink-0 mt-1" />
-                                        <span className="text-sm md:text-base text-onyx/70 leading-relaxed">
+                                        <Minus className="w-4 h-4 text-onyx/40 dark:text-bone/50 shrink-0 mt-1" />
+                                        <span className="text-sm md:text-base text-onyx/70 dark:text-[#E8E6E0]/75 leading-relaxed">
                                             {item}
                                         </span>
                                     </li>

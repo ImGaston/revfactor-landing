@@ -27,7 +27,7 @@ const pillars = [
 
 export function HowWeHelp() {
     return (
-        <section id="services" className="w-full py-16 md:py-20 bg-bone">
+        <section id="services" className="w-full py-16 md:py-20 bg-bone dark:bg-onyx">
             <div className="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
 
                 {/* Left Column - Service Overview */}
@@ -39,11 +39,11 @@ export function HowWeHelp() {
                         Our Approach
                     </Badge>
 
-                    <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-onyx lowercase leading-tight">
+                    <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-onyx dark:text-bone lowercase leading-tight">
                         pricing intelligence meets human expertise
                     </h2>
 
-                    <p className="font-sans text-base md:text-lg text-onyx/75 leading-relaxed">
+                    <p className="font-sans text-base md:text-lg text-onyx/75 dark:text-bone/75 leading-relaxed mt-4">
                         RevFactor acts as your dedicated revenue management team. We analyze market data, adjust your pricing daily, and design a custom strategy for your properties—all while keeping you informed and in control.
                     </p>
 
@@ -57,16 +57,16 @@ export function HowWeHelp() {
                     {pillars.map((pillar, index) => (
                         <Card
                             key={index}
-                            className="bg-white/50 border-onyx/10 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full"
+                            className="bg-white/50 dark:bg-cedar/20 border-onyx/10 dark:border-bone/10 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full"
                         >
                             <CardContent className="p-5 flex flex-col items-start h-full">
                                 <div className="w-8 h-8 rounded-lg bg-cedar/10 flex items-center justify-center text-cedar mb-3 shrink-0">
                                     <pillar.icon className="w-4 h-4" />
                                 </div>
-                                <h3 className="font-sans font-semibold text-sm md:text-base text-onyx mb-2">
+                                <h3 className="font-sans font-bold text-base md:text-lg text-onyx dark:text-bone mb-2">
                                     {pillar.title}
                                 </h3>
-                                <p className="text-xs md:text-sm text-onyx/70 leading-relaxed">
+                                <p className="text-sm text-onyx/70 dark:text-bone/70 leading-relaxed">
                                     {pillar.description}
                                 </p>
                             </CardContent>

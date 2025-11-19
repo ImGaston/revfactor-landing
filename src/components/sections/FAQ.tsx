@@ -35,7 +35,7 @@ const faqs = [
 
 export function FAQ() {
     return (
-        <section id="faq" className="w-full py-16 md:py-20 bg-bone">
+        <section id="faq" className="w-full py-16 md:py-20 bg-bone dark:bg-onyx">
             <div className="max-w-4xl mx-auto px-4 md:px-6">
 
                 {/* Header */}
@@ -47,11 +47,11 @@ export function FAQ() {
                         Questions?
                     </Badge>
 
-                    <h2 className="font-serif text-3xl md:text-4xl text-onyx lowercase leading-tight">
+                    <h2 className="font-serif text-3xl md:text-4xl text-onyx dark:text-[#E8E6E0] lowercase leading-tight">
                         everything you need to know
                     </h2>
 
-                    <p className="font-sans text-base md:text-lg text-onyx/75 leading-relaxed">
+                    <p className="font-sans text-base md:text-lg text-onyx/75 dark:text-[#E8E6E0]/80 leading-relaxed">
                         Clear answers about pricing, process, and what to expect.
                     </p>
                 </div>
@@ -59,11 +59,11 @@ export function FAQ() {
                 {/* Accordion */}
                 <Accordion type="single" collapsible className="w-full">
                     {faqs.map((faq, index) => (
-                        <AccordionItem key={index} value={`item-${index}`} className="border-onyx/10">
-                            <AccordionTrigger className="text-left font-sans font-semibold text-base md:text-lg text-onyx hover:text-moss hover:no-underline py-5 transition-colors">
+                        <AccordionItem key={index} value={`item-${index}`} className="border-onyx/10 dark:border-bone/10">
+                            <AccordionTrigger className="text-left font-sans font-semibold text-base md:text-lg text-onyx dark:text-[#E8E6E0] hover:text-moss dark:hover:text-moss hover:no-underline py-5 transition-colors">
                                 {faq.question}
                             </AccordionTrigger>
-                            <AccordionContent className="text-sm md:text-base text-onyx/75 leading-relaxed pb-5">
+                            <AccordionContent className="text-sm md:text-base text-onyx/75 dark:text-[#E8E6E0]/80 leading-relaxed pb-5">
                                 {faq.answer}
                             </AccordionContent>
                         </AccordionItem>

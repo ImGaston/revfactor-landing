@@ -31,7 +31,7 @@ const steps = [
 
 export function Process() {
     return (
-        <section id="how-it-works" className="w-full py-16 md:py-20 bg-bone">
+        <section id="how-it-works" className="w-full py-16 md:py-20 bg-bone dark:bg-onyx">
             <div className="max-w-6xl mx-auto px-4 md:px-6">
 
                 {/* Header */}
@@ -43,11 +43,11 @@ export function Process() {
                         Simple Process
                     </Badge>
 
-                    <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-onyx lowercase leading-tight">
+                    <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-onyx dark:text-[#E8E6E0] lowercase leading-tight">
                         how we work together
                     </h2>
 
-                    <p className="font-sans text-base md:text-lg text-onyx/75 max-w-2xl mx-auto leading-relaxed">
+                    <p className="font-sans text-base md:text-lg text-onyx/75 dark:text-[#E8E6E0]/80 max-w-2xl mx-auto leading-relaxed">
                         From first call to ongoing optimization, we make it effortless.
                     </p>
                 </div>
@@ -61,27 +61,27 @@ export function Process() {
                     {steps.map((step, index) => (
                         <Card
                             key={index}
-                            className="bg-white/40 border-onyx/10 rounded-2xl relative"
+                            className="bg-tobacco dark:bg-tobacco border-tobacco/20 dark:border-bone/10 rounded-2xl relative shadow-lg"
                         >
                             <CardContent className="p-6 flex flex-col items-start h-full">
 
                                 {/* Step Number */}
-                                <div className="w-12 h-12 rounded-full bg-cedar/10 flex items-center justify-center mb-4 shrink-0 self-start md:self-center md:bg-bone md:border-2 md:border-cedar/10 z-10">
-                                    <span className="font-serif text-xl text-cedar font-semibold">
+                                <div className="w-12 h-12 rounded-full bg-bone/20 flex items-center justify-center mb-4 shrink-0 self-start md:self-center z-10">
+                                    <span className="font-serif text-xl text-bone font-semibold">
                                         {step.number}
                                     </span>
                                 </div>
 
                                 {/* Icon */}
-                                <div className="w-10 h-10 rounded-lg bg-moss/10 flex items-center justify-center mb-4 shrink-0 text-moss">
+                                <div className="w-10 h-10 rounded-lg bg-bone/20 flex items-center justify-center mb-4 shrink-0 text-bone">
                                     <step.icon className="w-5 h-5" />
                                 </div>
 
-                                <h3 className="font-sans font-semibold text-base md:text-lg text-onyx mb-2">
+                                <h3 className="font-sans font-semibold text-base md:text-lg text-bone mb-2">
                                     {step.title}
                                 </h3>
 
-                                <p className="text-sm text-onyx/70 leading-relaxed">
+                                <p className="text-sm text-bone/80 leading-relaxed">
                                     {step.description}
                                 </p>
                             </CardContent>

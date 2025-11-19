@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, ExternalLink } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "./mode-toggle";
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,14 +35,20 @@ export function Header() {
     ];
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-bone/95 backdrop-blur-md border-b border-onyx/10 py-4">
+        <header className="sticky top-0 z-50 w-full bg-bone/95 dark:bg-onyx/95 backdrop-blur-md border-b border-onyx/10 dark:border-bone/10 py-4">
             <div className="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between">
 
                 {/* Logo */}
                 <img
                     src="/images/RevFactor_SecondaryLogo_Onyx.png"
                     alt="RevFactor"
-                    className="h-7 md:h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                    className="h-7 md:h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity dark:hidden"
+                    onClick={scrollToTop}
+                />
+                <img
+                    src="/images/RevFactor_SecondaryLogo_Bone.png"
+                    alt="RevFactor"
+                    className="hidden dark:block h-7 md:h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity"
                     onClick={scrollToTop}
                 />
 
@@ -51,7 +58,7 @@ export function Header() {
                         <span
                             key={link.name}
                             onClick={() => scrollToSection(link.id)}
-                            className="text-sm font-sans font-medium text-onyx/70 hover:text-cedar transition-colors cursor-pointer"
+                            className="text-sm font-sans font-medium text-onyx/70 dark:text-bone/70 hover:text-cedar dark:hover:text-moss transition-colors cursor-pointer"
                         >
                             {link.name}
                         </span>
@@ -60,6 +67,11 @@ export function Header() {
 
                 {/* Right Side Actions */}
                 <div className="flex items-center gap-3">
+
+                    {/* Theme Toggle */}
+                    <div className="hidden sm:block">
+                        <ModeToggle />
+                    </div>
 
                     {/* Client Portal Button (Always Visible) */}
                     <a
@@ -91,16 +103,21 @@ export function Header() {
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-bone border-l border-onyx/10">
+                        <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-bone dark:bg-onyx border-l border-onyx/10 dark:border-bone/10">
                             <div className="flex flex-col h-full">
                                 <div
                                     onClick={scrollToTop}
-                                    className="mb-8 cursor-pointer" // Removed text-specific classes
+                                    className="mb-8 cursor-pointer"
                                 >
                                     <img
                                         src="/images/RevFactor_SecondaryLogo_Onyx.png"
                                         alt="RevFactor"
-                                        className="h-8 w-auto"
+                                        className="h-8 w-auto dark:hidden"
+                                    />
+                                    <img
+                                        src="/images/RevFactor_SecondaryLogo_Bone.png"
+                                        alt="RevFactor"
+                                        className="hidden dark:block h-8 w-auto"
                                     />
                                 </div>
 
@@ -109,7 +126,7 @@ export function Header() {
                                         <button
                                             key={link.name}
                                             onClick={() => scrollToSection(link.id)}
-                                            className="w-full text-left px-4 py-3 rounded-lg text-base font-sans font-medium text-onyx hover:bg-moss/10 hover:text-cedar transition-colors"
+                                            className="w-full text-left px-4 py-3 rounded-lg text-base font-sans font-medium text-onyx dark:text-bone hover:bg-moss/10 dark:hover:bg-moss/20 hover:text-cedar dark:hover:text-moss transition-colors"
                                         >
                                             {link.name}
                                         </button>

@@ -29,7 +29,7 @@ const problems = [
 
 export function Problems() {
     return (
-        <section className="w-full py-16 md:py-20 bg-bone/80">
+        <section className="w-full py-16 md:py-20 bg-bone/80 dark:bg-onyx/95">
             <div className="max-w-6xl mx-auto px-4 md:px-6">
 
                 {/* Header */}
@@ -41,11 +41,11 @@ export function Problems() {
                         The Challenge
                     </Badge>
 
-                    <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-onyx lowercase leading-tight">
+                    <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-onyx dark:text-bone lowercase leading-tight">
                         managing rental pricing shouldn't feel like guesswork
                     </h2>
 
-                    <p className="font-sans text-base md:text-lg text-onyx/75 leading-relaxed">
+                    <p className="font-sans text-base md:text-lg text-onyx/75 dark:text-bone/75 leading-relaxed">
                         We understand the daily challenges property managers face. The short-term rental market moves fast, and without the right strategy, you're leaving money on the table—or pricing yourself out of bookings.
                     </p>
                 </div>
@@ -56,17 +56,17 @@ export function Problems() {
                         <Card
                             key={index}
                             className={cn(
-                                "bg-white/40 border-onyx/5 hover:-translate-y-1 hover:shadow-md transition-all duration-200"
+                                "bg-white/40 dark:bg-cedar/20 border-onyx/5 dark:border-bone/10 hover:-translate-y-1 hover:shadow-md transition-all duration-200"
                             )}
                         >
                             <CardContent className="p-5 md:p-6 flex flex-col items-start h-full">
                                 <div className="w-10 h-10 rounded-lg bg-moss/10 flex items-center justify-center mb-4 shrink-0">
                                     <problem.icon className="w-5 h-5 text-moss" />
                                 </div>
-                                <h3 className="font-sans font-semibold text-base md:text-lg text-onyx mb-2">
+                                <h3 className="font-sans font-semibold text-base md:text-lg text-onyx dark:text-bone mb-2">
                                     {problem.title}
                                 </h3>
-                                <p className="text-sm text-onyx/70 leading-relaxed">
+                                <p className="text-sm text-onyx/70 dark:text-bone/70 leading-relaxed">
                                     {problem.description}
                                 </p>
                             </CardContent>
